@@ -5,3 +5,20 @@
 # то треугольника с такими сторонами не существует.
 # Отдельно сообщить является ли треугольник разносторонним, равнобедренным или равносторонним.
 
+side_a = int(input('Задайте длину стороны A: '))
+side_b = int(input('Задайте длину стороны B: '))
+side_c = int(input('Задайте длину стороны C: '))
+
+if (side_a < side_b + side_c) and (side_b < side_a + side_c) and (side_c < side_a + side_b):
+    print('Треугольник существует ')
+
+    if (side_a == side_b == side_c) and (side_a == side_c):
+        print('Треугольник является равносторонним')
+    elif (side_a == side_b and side_a != side_c) or (side_b == side_c and side_b != side_a) \
+                or (side_a == side_c and side_c != side_b):
+        print('Треугольник является равнобедренным')
+    else:
+        print('Треугольник является разносторонним')
+
+else:
+    print('Треугольник не существует')
