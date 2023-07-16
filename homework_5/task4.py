@@ -11,7 +11,7 @@ def fibonacci(num):
         num -= 1
 
 
-fibon = fibonacci(5)
+fibon = fibonacci(8)
+list_fibon = iter(fibon)
 
-for number in fibon:
-    print(number)
+print(*list_fibon)
