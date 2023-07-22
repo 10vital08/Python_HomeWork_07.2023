@@ -2,6 +2,7 @@
 
 from sys import argv
 
+__all__ = ['valid']
 
 def is_leap(year: int, ) -> bool:
     return not (year % 4 != 0 or year % 100 == 0 and year % 400 != 0)
@@ -29,3 +30,5 @@ if __name__ == "__main__":
             print("Дата существует")
         else:
             print("Дата не существует")
+
+# __all__ = ['valid']
