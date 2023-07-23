@@ -11,44 +11,43 @@
 import os
 
 FINAL_NAME = "lol"
-COUNT_DIGIT = 1
+COUNT_DIGIT = 2
 
 
 def rename_file(new_name: str, count_digit: int, old_extension: str, new_extension: str, range_simb: list):
+    os.chdir('files')
     # список файлов в текущей директории
     all_files_directory = os.listdir()
     file_number = ''
+    count = 0 # счётчик файлов
+
+    if count_digit == 1:
+        count = 1
+    elif count_digit == 2:
+        count = 9
 
     for file in all_files_directory:
-
-        # list_str = file
-        if file != "files":
-            # количество символов старого имени, расширение старого имени
-            count_char_old_name, expansion_old_file = file.split('.')
-        else:
-            continue
-
-        # if expansion_old_file == old_extension:
-        #     file_number = ''
+        # количество символов старого имени, расширение старого имени
+        count_char_old_name, expansion_old_file = file.split('.')
 
         # если такого расширения нет в списке файлов, то пропускаем итерацию
         if expansion_old_file != old_extension:
             continue
 
-        # file_number = file_number[:-len(str(range_simb[0]))] + str(range_simb[2])
-
         # если в аргументах указали, с какого по какой символ нужно сохранить от старого имени, то формируем срез
         if len(range_simb) == 2:
-            count_char_old_name = file[range_simb[0] - 1: range_simb[1] - 1:]
+            count += 1
+            if len(count_char_old_name) > range_simb[1] - range_simb[0]:
+                count_char_old_name = file[range_simb[0] - 1: range_simb[1]:]
 
         # вызываем метод переименования файла для склейки получившегося имени
-        os.rename(file, f'{count_char_old_name}{FINAL_NAME}.{new_extension}')
+        os.rename(file, f'{count_char_old_name}{FINAL_NAME}{count}.{new_extension}')
 
 
-rename_file(FINAL_NAME, COUNT_DIGIT, "png", "txt", [1, 3])
+rename_file(FINAL_NAME, COUNT_DIGIT, "png", "txt", [2, 5])
 
 # if __name__ == "__main__":
-#     if rename_file(FINAL_NAME, COUNT_DIGIT, "png", "txt", [1, 3]):
+#     if rename_file(FINAL_NAME, COUNT_DIGIT, "png", "txt", [2, 5]):
 #         print("Переименование прошло успешно")
 #     else:
 #         print("Вы допустили ошибку, к глубочайшему сожалению")
