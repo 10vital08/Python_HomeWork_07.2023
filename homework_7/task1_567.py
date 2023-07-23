@@ -10,29 +10,29 @@ from pathlib import Path
 # Количество файлов для каждого расширения различно.
 # Внутри используйте вызов функции из прошлой задачи.
 
-# from random import randint, choice
-#
-# DIC1 = "GHIGYUGKJ"
-# DIC2 = "HIUHGYGHUGKJHI"
-#
-#
-# def function_ext(dic, a=5, b=30, c=7, d=256):
-#     for key in dic:
-#         for _ in range(dic[key]):
-#             name = ""
-#             for i in range(randint(6, 30)):
-#                 name += choice(DIC1)
-#                 if len(name) >= 30:
-#                     break
-#                 name += choice(DIC2)
-#             name = name + '.' + key
-#             with open(name, 'w', encoding='utf-8') as new_f:
-#                 g = bytes(randint(0, 255) for i in range(randint(256, 4096)))
-#                 new_f.write(f'{g}')
-#
-#
-# dic = {"txt": 5, "doc": 3}
-# function_ext(dic, a=5, b=30, c=7, d=256)
+from random import randint, choice
+
+DIC1 = "GHIGYUGKJ"
+DIC2 = "HIUHGYGHUGKJHI"
+
+
+def function_ext(dic, a=5, b=30, c=7, d=256):
+    for key in dic:
+        for _ in range(dic[key]):
+            name = ""
+            for i in range(randint(6, 30)):
+                name += choice(DIC1)
+                if len(name) >= 30:
+                    break
+                name += choice(DIC2)
+            name = name + '.' + key
+            with open(name, 'w', encoding='utf-8') as new_f:
+                g = bytes(randint(0, 255) for i in range(randint(256, 4096)))
+                new_f.write(f'{g}')
+
+
+dic = {"txt": 5, "doc": 3}
+function_ext(dic, a=5, b=30, c=7, d=256)
 
 
 
@@ -44,42 +44,42 @@ from pathlib import Path
 # (добавьте проверки).
 # Существующие файлы не должны удаляться/изменяться в случае совпадения имён.
 
-# from random import randint, choice
-#
-# DIC1 = "GHIGYUGKJ"
-# DIC2 = "HIUHGYGHUGKJHI"
-#
-#
-# def function_dir(dic, a=5, b=30, c=7, d=256):
-#     for key in dic:
-#         for _ in range(dic[key]):
-#             name = ""
-#             for i in range(randint(6, 30)):
-#                 name += choice(DIC1)
-#                 if len(name) >= 30: break
-#                 name += choice(DIC2)
-#             name = name + '.' + key
-#             if Path(name).is_file():
-#                 continue
-#             with open(name, 'w', encoding='utf-8') as new_f:
-#                 g = bytes(randint(0, 255) for i in range(randint(256, 4096)))
-#                 new_f.write(f'{g}')
-#
-#
-# dic = {"txt": 5, "doc": 3}
-# function_dir(dic, a=5, b=30, c=7, d=256)
-#
-# def dir(text):
-#     if isinstance(text, str):
-#         a = Path(text)
-#     else:
-#         a = text
-#     if not a.is_dir():
-#         a.mkdir(parents=True)
-#     chdir(a)
-#     function_dir(dic, a=5, b=30, c=7, d=256)
-#
-# dir('Sem7')
+from random import randint, choice
+
+DIC1 = "GHIGYUGKJ"
+DIC2 = "HIUHGYGHUGKJHI"
+
+
+def function_dir(dic, a=5, b=30, c=7, d=256):
+    for key in dic:
+        for _ in range(dic[key]):
+            name = ""
+            for i in range(randint(6, 30)):
+                name += choice(DIC1)
+                if len(name) >= 30: break
+                name += choice(DIC2)
+            name = name + '.' + key
+            if Path(name).is_file():
+                continue
+            with open(name, 'w', encoding='utf-8') as new_f:
+                g = bytes(randint(0, 255) for i in range(randint(256, 4096)))
+                new_f.write(f'{g}')
+
+
+dic = {"txt": 5, "doc": 3}
+function_dir(dic, a=5, b=30, c=7, d=256)
+
+def dir(text):
+    if isinstance(text, str):
+        a = Path(text)
+    else:
+        a = text
+    if not a.is_dir():
+        a.mkdir(parents=True)
+    chdir(a)
+    function_dir(dic, a=5, b=30, c=7, d=256)
+
+dir('Sem7')
 
 
 
