@@ -1,0 +1,5 @@
+Dir,Files
+DIRECTORY - directory,[]
+DIRECTORY - directory\dir_1,"['FILE - 111 — копия.txt = 0 byte', 'FILE - 111.txt = 0 byte']"
+DIRECTORY - directory\dir_2,"['FILE - 222 — копия (2).txt = 0 byte', 'FILE - 222 — копия.txt = 0 byte', 'FILE - 222.txt = 0 byte']"
+DIRECTORY - directory\dir_3,['FILE - 333.txt = 0 byte']

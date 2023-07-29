@@ -1,0 +1,15 @@
+{
+    "DIRECTORY - directory":[],
+    "DIRECTORY - directory\\dir_1":[
+        "FILE - 111 \u2014 \u043a\u043e\u043f\u0438\u044f.txt = 0 byte",
+        "FILE - 111.txt = 0 byte"
+    ],
+    "DIRECTORY - directory\\dir_2":[
+        "FILE - 222 \u2014 \u043a\u043e\u043f\u0438\u044f (2).txt = 0 byte",
+        "FILE - 222 \u2014 \u043a\u043e\u043f\u0438\u044f.txt = 0 byte",
+        "FILE - 222.txt = 0 byte"
+    ],
+    "DIRECTORY - directory\\dir_3":[
+        "FILE - 333.txt = 0 byte"
+    ]
+}
