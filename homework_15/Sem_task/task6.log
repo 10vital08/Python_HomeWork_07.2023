@@ -1,0 +1,5 @@
+2023-09-03 16:13:01,498 - INFO: FSObject(name='common_log_util', ext='py', is_dir=False, parent='Sem_task')
+2023-09-03 16:13:01,498 - INFO: FSObject(name='dir_walker', ext='py', is_dir=False, parent='Sem_task')
+2023-09-03 16:13:01,498 - INFO: FSObject(name='task6', ext='log', is_dir=False, parent='Sem_task')
+2023-09-03 16:13:01,498 - INFO: FSObject(name='task_sem_15_6', ext='py', is_dir=False, parent='Sem_task')
+2023-09-03 16:13:01,499 - INFO: FSObject(name='__pycache__', ext=None, is_dir=False, parent='Sem_task')
